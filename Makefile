@@ -1,12 +1,3 @@
-SHELL := /bin/sh
-
-BINARY_NAME ?= gcp-quota-exporter
-DOCKER_REGISTRY ?= mintel
-DOCKER_IMAGE = ${DOCKER_REGISTRY}/${BINARY_NAME}
-
-VERSION ?= $(shell echo `git symbolic-ref -q --short HEAD || git describe --tags --exact-match` | tr '[/]' '-')
-DOCKER_TAG ?= ${VERSION}
-
 ARTIFACTS = /tmp/artifacts
 
 build : gcp-quota-exporter
